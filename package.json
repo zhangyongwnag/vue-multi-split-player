@@ -2,15 +2,47 @@
   "name": "video-player",
   "version": "1.0.0",
   "description": "A custom video player component",
-  "main": "index.js",
+  "author": "yw.z",
+  "main": "index.ts",
+  "license": "MIT",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite serve -c ./config/vite.config.ts -m development",
+    "build": "vite build -c ./config/vite.config.ts -m production"
   },
   "keywords": [
     "video",
     "player",
-    "component"
+    "videoPlayer",
+    "vue"
   ],
-  "author": "yw.z",
-  "license": "MIT"
+  "dependencies": {
+    "vue": "^2.7.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.25.9",
+    "@esbuild/win32-x64": "^0.25.6",
+    "@types/node": "^22.13.5",
+    "@vitejs/plugin-vue2": "^2.3.3",
+    "archiver": "^7.0.1",
+    "autoprefixer": "^9.8.6",
+    "cfonts": "^3.3.0",
+    "chalk": "^4.1.0",
+    "esbuild": "^0.25.6",
+    "less": "^4.2.2",
+    "path": "^0.12.7",
+    "postcss": "^8.5.3",
+    "postcss-pxtorem": "^6.1.0",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.3",
+    "unocss": "^66.3.3",
+    "vite": "^5.4.11",
+    "vite-plugin-babel": "^1.3.0"
+  },
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 6.0.0"
+  }
 }

@@ -1,0 +1,19 @@
+{
+  // 编译选项
+  "compilerOptions": {
+    // 模块名到基于 baseUrl的路径映射的列表
+    "paths": {
+      "@": ["./src/"],
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true,
+  },
+  // 包含文件
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
