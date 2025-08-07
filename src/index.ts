@@ -1,12 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import '@/utils/flexible'
-import * as VideoPlayer from "./videoPlayer/index.js";
-import '@/assets/css/tailwind.css'
-import '@/assets/css/player.css'
-import '@/assets/iconfont/iconfont.css'
-import '@/assets/css/common.css'
-import '@/assets/css/index.css'
+import * as VideoPlayer from "../dist/video-player.es"
+
+import '../dist/style.css'
+
 import { Slider, Popover, Button } from 'element-ui'
 
 Vue.use(VideoPlayer)

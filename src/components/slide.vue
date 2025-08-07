@@ -256,11 +256,11 @@ export default {
       }
       this.loading = true
       // 获取缩略图
-      common.getVideoFrameImage(this.httpPath, current.toFixed(2), 180, 101.5)
-        .then(res => {
-          this.loading = false
-          this.$set(this.thumbnail, 'url', res)
-        })
+      // common.getVideoFrameImage(this.httpPath, current.toFixed(2), 180, 101.5)
+      //   .then(res => {
+      //     this.loading = false
+      //     this.$set(this.thumbnail, 'url', res)
+      //   })
     },
     /**
      * @description 鼠标移出，隐藏移动块

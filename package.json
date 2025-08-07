@@ -4,7 +4,16 @@
   "description": "A custom video player component",
   "homepage": "https://github.com/ywz123/videoPlayer",
   "author": "yw.z",
-  "main": "index.ts",
+  "main": "./dist/video-player.umd.js",
+  "module": "./dist/video-player.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/video-player.es.js",
+      "require": "./dist/video-player.umd.js",
+      "default": "./dist/video-player.umd.js"
+    },
+    "./style": "./dist/style.css"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -16,6 +25,10 @@
     "player",
     "videoPlayer",
     "vue"
+  ],
+  "files": [
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",

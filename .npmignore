@@ -1,13 +1,10 @@
 .idea/
 node_modules/
-dist/
 build/
 coverage/
 *.log
 .env
 .DS_Store
 Thumbs.db
-README.md
-LICENSE
 .gitignore
 package-lock.json
