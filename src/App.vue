@@ -47,9 +47,8 @@ export default {
           ]
         }
       },
-      msg: 'hello world'
     }
-  }
+  },
 }
 </script>
 

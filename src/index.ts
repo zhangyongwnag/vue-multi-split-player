@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import '@/utils/flexible'
-import VideoPlayer from "@/videoPlayer";
+import * as VideoPlayer from "./videoPlayer/index.js";
 import '@/assets/css/tailwind.css'
 import '@/assets/css/player.css'
 import '@/assets/iconfont/iconfont.css'
