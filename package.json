@@ -1,0 +1,16 @@
+{
+  "name": "video-player",
+  "version": "1.0.0",
+  "description": "A custom video player component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "player",
+    "component"
+  ],
+  "author": "yw.z",
+  "license": "MIT"
+}
