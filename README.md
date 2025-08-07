@@ -1,11 +1,13 @@
 # Video Player
 
-A custom video player component for web applications.
+A custom video player component for web applications for Vue2.7.
+
 
 ## Installation
 
 ```bash
-npm install video-player
+pnpm install video-player -S
+yarn add video-player
 ```
 
 ## Usage

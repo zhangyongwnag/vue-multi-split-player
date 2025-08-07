@@ -1,0 +1,100 @@
+{
+  "id": "4994019",
+  "name": "videoPlayer",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "播放器相关",
+  "glyphs": [
+    {
+      "icon_id": "36582674",
+      "name": "二级菜单--多屏幕",
+      "font_class": "erjicaidan--duopingmu",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "35473897",
+      "name": "设置-设置-填充",
+      "font_class": "shezhi-shezhi-tianchong",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "36284867",
+      "name": "取消全屏",
+      "font_class": "quxiaoquanping",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1727484",
+      "name": "240显示、可见",
+      "font_class": "xianshikejian",
+      "unicode": "e8d4",
+      "unicode_decimal": 59604
+    },
+    {
+      "icon_id": "1727486",
+      "name": "241隐藏、不可见",
+      "font_class": "yincangbukejian",
+      "unicode": "e8d5",
+      "unicode_decimal": 59605
+    },
+    {
+      "icon_id": "5387606",
+      "name": "全屏",
+      "font_class": "quanping1",
+      "unicode": "eb11",
+      "unicode_decimal": 60177
+    },
+    {
+      "icon_id": "5958464",
+      "name": "ocr 印刷文字识别",
+      "font_class": "ocr",
+      "unicode": "e8cd",
+      "unicode_decimal": 59597
+    },
+    {
+      "icon_id": "7594152",
+      "name": "24gf-pause2",
+      "font_class": "24gf-pause2",
+      "unicode": "ea81",
+      "unicode_decimal": 60033
+    },
+    {
+      "icon_id": "7594155",
+      "name": "24gf-play",
+      "font_class": "24gf-play",
+      "unicode": "ea82",
+      "unicode_decimal": 60034
+    },
+    {
+      "icon_id": "8923944",
+      "name": "电影院",
+      "font_class": "-",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "10949567",
+      "name": "图文列表",
+      "font_class": "tuwenliebiao",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "23770054",
+      "name": "音频列表",
+      "font_class": "yinpinliebiao",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "28486240",
+      "name": "画中画",
+      "font_class": "btn_trophy_defaultbeifen",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    }
+  ]
+}

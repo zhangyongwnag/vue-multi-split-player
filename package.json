@@ -2,6 +2,7 @@
   "name": "video-player",
   "version": "1.0.0",
   "description": "A custom video player component",
+  "homepage": "https://github.com/ywz123/videoPlayer",
   "author": "yw.z",
   "main": "index.ts",
   "license": "MIT",
@@ -16,7 +17,14 @@
     "videoPlayer",
     "vue"
   ],
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangyongwnag/video-player"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangyongwnag/video-player/issues"
+  },
+  "peerDependencies": {
     "vue": "^2.7.16"
   },
   "devDependencies": {
@@ -44,5 +52,10 @@
   "engines": {
     "node": ">= 16.0.0",
     "npm": ">= 6.0.0"
+  },
+  "dependencies": {
+    "big.js": "^7.0.1",
+    "element-ui": "^2.11.0",
+    "pubsub-js": "^1.9.5"
   }
 }

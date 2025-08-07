@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4994019 */
+  src: url('iconfont.woff2?t=1754554311566') format('woff2'),
+       url('iconfont.woff?t=1754554311566') format('woff'),
+       url('iconfont.ttf?t=1754554311566') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-erjicaidan--duopingmu:before {
+  content: "\e64e";
+}
+
+.icon-shezhi-shezhi-tianchong:before {
+  content: "\e62e";
+}
+
+.icon-quxiaoquanping:before {
+  content: "\e62f";
+}
+
+.icon-xianshikejian:before {
+  content: "\e8d4";
+}
+
+.icon-yincangbukejian:before {
+  content: "\e8d5";
+}
+
+.icon-quanping1:before {
+  content: "\eb11";
+}
+
+.icon-ocr:before {
+  content: "\e8cd";
+}
+
+.icon-24gf-pause2:before {
+  content: "\ea81";
+}
+
+.icon-24gf-play:before {
+  content: "\ea82";
+}
+
+.icon--:before {
+  content: "\e64c";
+}
+
+.icon-tuwenliebiao:before {
+  content: "\e66d";
+}
+
+.icon-yinpinliebiao:before {
+  content: "\e6a5";
+}
+
+.icon-btn_trophy_defaultbeifen:before {
+  content: "\e64f";
+}
+
