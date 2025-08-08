@@ -1,19 +1,11 @@
 {
   "name": "vue-multi-split-player",
-  "version": "1.0.0-alpha.1.1",
+  "version": "1.0.0-alpha.1.3",
   "description": "A custom video player component",
   "homepage": "https://github.com/ywz123/vue-multi-split-player",
   "author": "yw.z",
   "main": "./dist/vue-multi-split-player.umd.js",
   "module": "./dist/vue-multi-split-player.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue-multi-split-player.es.js",
-      "require": "./dist/vue-multi-split-player.umd.js",
-      "default": "./dist/vue-multi-split-player.umd.js"
-    },
-    "./style": "./dist/style.css"
-  },
   "license": "MIT",
   "private": false,
   "scripts": {

@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "element-ui": "^2.11.0",
-    "vue-multi-split-player": "^1.0.0-alpha.1.1"
+    "vue-multi-split-player": "^1.0.0-alpha.1.2"
   }
 }

@@ -23,25 +23,73 @@ let playStreams = {
   '高清': {
     source: [
       {
-        url: 'http://10.0.129.5:81/vod/NAS1//upload/resource/2025/03/17/653e0db2246b459d8c10bb85792d7058/AI赋能督导-本机.mp4',
-        name: '老师.mp4'
-      }
+        url: 'http://vjs.zencdn.net/v/oceans.mp4',
+        name: '海洋',
+        id: 1
+      },
+      {
+        url: 'https://www.w3schools.com/html/movie.mp4',
+        name: '大灰熊',
+        id: 2
+      },
+      {
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209105011F0zPoYzHry.mp4',
+        name: '新闻1',
+        id: 3
+      },
+      {
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4',
+        name: '新闻2',
+        id: 4
+      },
     ]
   },
   '标清': {
     source: [
       {
-        url: 'http://10.0.129.5:81/vod/NAS1//upload/resource/2025/03/17/653e0db2246b459d8c10bb85792d7058/AI赋能督导-本机.mp4',
-        name: '老师.mp4'
-      }
+        url: 'https://www.w3schools.com/html/movie.mp4',
+        name: '大灰熊',
+        id: 1
+      },
+      {
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4',
+        name: '新闻2',
+        id: 2
+      },
+      {
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209105011F0zPoYzHry.mp4',
+        name: '新闻1',
+        id: 3
+      },
+      {
+        url: 'http://vjs.zencdn.net/v/oceans.mp4',
+        name: '海洋',
+        id: 4
+      },
     ]
   },
   '超清': {
     source: [
       {
-        url: 'http://10.0.129.5:81/vod/NAS1//upload/resource/2025/03/17/653e0db2246b459d8c10bb85792d7058/AI赋能督导-本机.mp4',
-        name: '老师.mp4'
-      }
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4',
+        name: '新闻2',
+        id: 1
+      },
+      {
+        url: 'http://vjs.zencdn.net/v/oceans.mp4',
+        name: '海洋',
+        id: 2
+      },
+      {
+        url: 'https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209105011F0zPoYzHry.mp4',
+        name: '新闻1',
+        id: 3
+      },
+      {
+        url: 'https://www.w3schools.com/html/movie.mp4',
+        name: '大灰熊',
+        id: 4
+      },
     ]
   }
 }

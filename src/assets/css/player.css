@@ -243,6 +243,7 @@ div[role="region"][aria-label="Video Player"] {
 
 .video__ {
   width: 100%;
+  aspect-ratio: 16 / 9;
   height: 100%;
   object-fit: fill !important;
   background-color: #000;

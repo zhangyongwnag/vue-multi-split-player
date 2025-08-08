@@ -1,6 +1,6 @@
 # vue-multi-split-player
 
-A custom video player component for Vue 2.7 applications with support for multiple qualities, danmaku, and advanced controls. 
+一款垃圾自适应多分屏播放器。
 
 ## Features
 - - [x] 基础多分屏播放，最高5分屏
@@ -109,7 +109,7 @@ let playStreams = reactive({
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | mode | String | 'live' | 播放类型: live：直播，vod：点播，websocket or webrtc |
-| playStreams | Object | {} | 要播放的资源，例如：{ '高清': { source: { [ name: '', url: '' ] } } } |
+| playStreams | Object | {} | 要播放的资源，例如：{ '高清': { source: { [ name: '', url: '', id: '' ] } } } |
 | noteList | Array | [] | mark点，例如：[{ startSecond: 0, imgUrl: '', content: '' }] |
 | muted | Boolean | false | 是否静音播放，如果静音播放，浏览器播放策略不会生效(媒体参与度) |
 | autoplay | Boolean | true | 是否自动播放 |
