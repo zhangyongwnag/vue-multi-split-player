@@ -1,6 +1,6 @@
 {
   "name": "vue-multi-split-player",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1.1",
   "description": "A custom video player component",
   "homepage": "https://github.com/ywz123/vue-multi-split-player",
   "author": "yw.z",

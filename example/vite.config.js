@@ -5,7 +5,7 @@ import createVuePlugin from '@vitejs/plugin-vue2';
 export default defineConfig(config => {
     return {
         root: process.cwd(), // 项目根目录
-        base: '/',
+        base: './',
         publicDir: 'public', // 静态资产的目录，默认 public
         cacheDir: 'node_modules/.vite', // esbuild预构建缓存(依赖/缓存)
         resolve: {

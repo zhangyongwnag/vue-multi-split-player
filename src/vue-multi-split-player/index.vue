@@ -295,7 +295,9 @@ import useChannelExists from './hook/useChannelExists'
 import usePlayerEmit from './hook/usePlayerEmit'
 import AudioResource from '@/assets/audio/voice.m4a'
 
-const {proxy: _t} = getCurrentInstance()
+// 修复后的代码
+const instance = getCurrentInstance()
+const _t = instance ? instance.proxy : null
 
 let { isExists } = useChannelExists()
 
