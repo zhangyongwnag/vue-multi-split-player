@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import * as VideoPlayer from "../../dist/video-player.es"
+import * as VueMultiSplitPlayer from "../../dist/vue-multi-split-player.es"
 import '../../dist/style.css'
 import { Slider, Popover, Button } from 'element-ui'
 
-Vue.use(VideoPlayer)
+Vue.use(VueMultiSplitPlayer)
 Vue.use(Slider)
 Vue.use(Popover)
 Vue.use(Button)

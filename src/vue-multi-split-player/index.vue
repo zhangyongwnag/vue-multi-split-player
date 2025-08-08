@@ -278,7 +278,6 @@
 <script setup>
 import {ref, reactive, watch, computed, nextTick, onMounted, onBeforeUnmount, getCurrentInstance} from 'vue';
 import Slide from '@/components/slide.vue';
-import {Big} from 'big.js';
 import * as common from '@/utils/common';
 import FullScreen from '@/components/fullscreen.vue';
 import WaterMarker from './player/waterMarker';

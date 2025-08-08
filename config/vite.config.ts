@@ -43,11 +43,11 @@ export default defineConfig(config => {
             copyPublicDir: false, // 不复制public目录
             reportCompressedSize: false,
             lib: {
-                entry: resolve(__dirname, '../src/videoPlayer/index.js'), // 入口文件
-                name: 'VideoPlayer', // 库名称
+                entry: resolve(__dirname, '../src/vue-multi-split-player/index.js'), // 入口文件
+                name: 'vue-multi-split-player', // 库名称
                 // formats: ['es', 'umd', 'cjs', 'amd', 'system'], // 输出格式
                 formats: ['es', 'umd'], // 输出格式
-                fileName: (format) => `video-player.${format}.js`, // 输出文件名
+                fileName: (format) => `vue-multi-split-player.${format}.js`, // 输出文件名
             },
             rollupOptions: {
                 // 确保外部化处理那些你不想打包进库的依赖

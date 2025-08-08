@@ -1,16 +1,16 @@
 {
-  "name": "video-player",
+  "name": "vue-multi-split-player",
   "version": "1.0.0",
   "description": "A custom video player component",
-  "homepage": "https://github.com/ywz123/videoPlayer",
+  "homepage": "https://github.com/ywz123/vue-multi-split-player",
   "author": "yw.z",
-  "main": "./dist/video-player.umd.js",
-  "module": "./dist/video-player.es.js",
+  "main": "./dist/vue-multi-split-player.umd.js",
+  "module": "./dist/vue-multi-split-player.es.js",
   "exports": {
     ".": {
-      "import": "./dist/video-player.es.js",
-      "require": "./dist/video-player.umd.js",
-      "default": "./dist/video-player.umd.js"
+      "import": "./dist/vue-multi-split-player.es.js",
+      "require": "./dist/vue-multi-split-player.umd.js",
+      "default": "./dist/vue-multi-split-player.umd.js"
     },
     "./style": "./dist/style.css"
   },
@@ -22,9 +22,9 @@
   },
   "keywords": [
     "video",
+    "multi-split",
     "player",
-    "videoPlayer",
-    "vue"
+    "vue-multi-split-player"
   ],
   "files": [
     "dist",
@@ -32,10 +32,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhangyongwnag/video-player"
+    "url": "https://github.com/zhangyongwnag/vue-multi-split-player"
   },
   "bugs": {
-    "url": "https://github.com/zhangyongwnag/video-player/issues"
+    "url": "https://github.com/zhangyongwnag/vue-multi-split-player/issues"
   },
   "peerDependencies": {
     "vue": "^2.7.16"

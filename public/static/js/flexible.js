@@ -1,7 +1,7 @@
 ;(function(win, lib) {
     var doc = win.document;
     var docEl = doc.documentElement;
-    var metaEl = doc.querySelector('meta[name="viewport"]');
+    var metaEl = doc.querySelector('meta[name=""]');
     var flexibleEl = doc.querySelector('meta[name="flexible"]');
     var dpr = 0;
     var scale = 0;

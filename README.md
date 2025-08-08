@@ -1,4 +1,4 @@
-# Video Player
+# VueMultiSplitPlayer
 
 A custom video player component for Vue 2.7 applications with support for multiple qualities, danmaku, and advanced controls. 
 
@@ -19,13 +19,13 @@ A custom video player component for Vue 2.7 applications with support for multip
 
 ```bash
 # Using pnpm
-pnpm install video-player -S
+pnpm install VueMultiSplitPlayer -S
 
 # Using yarn
-yarn add video-player
+yarn add VueMultiSplitPlayer
 
 # Using npm
-npm install video-player --save
+npm install VueMultiSplitPlayer --save
 ```
 
 ## Usage
@@ -35,23 +35,23 @@ npm install video-player --save
 ```javascript
 // main.js
 import Vue from 'vue';
-import * as VideoPlayer from "./videoPlayer/index.js";
-import 'video-player/dist/style.css'; // Import styles
+import * as VueMultiSplitPlayer from "./VueMultiSplitPlayer/index.js";
+import 'VueMultiSplitPlayer/dist/style'; // Import styles
 
-Vue.use(VideoPlayer);
+Vue.use(VueMultiSplitPlayer);
 ```
 
 ### Local Registration for Vue2.7
 
 ```javascript
 // In your component
-import { VideoPlayer } from 'video-player';
-import 'video-player/dist/style.css'; // Import styles
+import { VueMultiSplitPlayer } from 'VueMultiSplitPlayer';
+import 'VueMultiSplitPlayer/style'; // Import styles
 
 // for vue2.6-
 export default {
   components: {
-    VideoPlayer
+    VueMultiSplitPlayer
   }
   // ...
 }
@@ -62,7 +62,7 @@ export default {
 ```vue
 <template>
   <div class="container">
-    <VideoPlayer
+    <VueMultiSplitPlayer
       mode="vod"
       :playStreams="playStreams"
       :noteList="[]"

@@ -1,6 +1,6 @@
 <template>
   <div class="container w-[1920px] h-[1080px]">
-    <VideoPlayer
+    <VueMultiSplitPlayer
         mode="vod"
         :playStreams="playStreams"
         :noteList="[]"
@@ -10,8 +10,6 @@
         :isEnableControl="false"
         :isEnableOcr="false"
         :isEnableToolbar="true"
-        :width="1920"
-        :height="1080"
     />
   </div>
 </template>
@@ -55,5 +53,7 @@ export default {
 <style scoped lang="less">
 .container {
   display: flex;
+  width: 800px;
+  height: 600px;
 }
 </style>

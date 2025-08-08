@@ -1,15 +1,14 @@
-import VideoPlayer from './index.vue'
+import VueMultiSplitPlayer from './index.vue'
 import '@/assets/css/tailwind.css'
 import '@/assets/css/player.css'
 import '@/assets/iconfont/iconfont.css'
 import '@/assets/css/common.css'
 import '@/assets/css/index.css'
 import '@/assets/css/video-js.min.css'
-import '@/utils/flexible'
 
 const install = (Vue, options) => {
   if (options) {
-    // let _v = Vue.extend(VideoPlayer)
+    // let _v = Vue.extend(VueMultiSplitPlayer)
     // let instance = new _v().$mount()
     // instance.$props = options
     //
@@ -17,10 +16,10 @@ const install = (Vue, options) => {
     //   instance.$destroy()
     // }, 1000)
   }
-  Vue.component('VideoPlayer', VideoPlayer)
+  Vue.component('VueMultiSplitPlayer', VueMultiSplitPlayer)
 }
 
 export {
-  VideoPlayer,
+  VueMultiSplitPlayer,
   install
 }

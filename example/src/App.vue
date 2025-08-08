@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <VideoPlayer
+    <VueMultiSplitPlayer
         mode="vod"
         :playStreams="playStreams"
         :noteList="[]"

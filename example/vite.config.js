@@ -42,7 +42,7 @@ export default defineConfig(config => {
         build: {
             target: 'es2015',
             emptyOutDir: true, // 清空输出的文件夹
-            outDir: resolve(__dirname, `../disk`), // 指定输出路径（相对于 项目根目录)
+            outDir: resolve(__dirname, `../example/dist`), // 指定输出路径（相对于 项目根目录)
             assetsDir: '/', // 指定生成静态资源的存放路径（相对于 build.outDir)
             brotliSize: false, // 禁用压缩大小报告
             assetsInlineLimit: 1024 * 10, // 小于此阈值的导入或引用资源将内联为 base64 编码，以避免额外的 http 请求
