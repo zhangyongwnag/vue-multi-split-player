@@ -3,9 +3,11 @@ import path, {resolve} from 'path'
 import createVuePlugin from '@vitejs/plugin-vue2';
 
 export default defineConfig(config => {
+    let _publicPath = config.mode !== 'production' ? '/' : '/example/dist' // 配置后端服务默认的路径
+
     return {
         root: process.cwd(), // 项目根目录
-        base: './',
+        base: _publicPath,
         publicDir: 'public', // 静态资产的目录，默认 public
         cacheDir: 'node_modules/.vite', // esbuild预构建缓存(依赖/缓存)
         resolve: {
