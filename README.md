@@ -1,7 +1,5 @@
 # vue-multi-split-player
 
-------
-
 [![npm version](https://img.shields.io/npm/v/vue-multi-split-player.svg)](https://www.npmjs.com/package/vue-multi-split-player)
 [![vue version](https://img.shields.io/badge/vue-2.7.16-green.svg)](https://vuejs.org/)
 [![minified size](https://img.shields.io/badge/minified%20size-%3C%20100KB-blue.svg)](https://github.com/zhangyongwnag/vue-multi-split-player)
