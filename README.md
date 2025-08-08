@@ -1,6 +1,16 @@
 # vue-multi-split-player
 
-一款垃圾自适应多分屏播放器。
+------
+
+[![npm version](https://img.shields.io/npm/v/vue-multi-split-player.svg)](https://www.npmjs.com/package/vue-multi-split-player)
+[![vue version](https://img.shields.io/badge/vue-2.7.16-green.svg)](https://vuejs.org/)
+[![minified size](https://img.shields.io/badge/minified%20size-%3C%20100KB-blue.svg)](https://github.com/zhangyongwnag/vue-multi-split-player)
+[![license](https://img.shields.io/npm/l/vue-multi-split-player.svg)](https://github.com/zhangyongwnag/vue-multi-split-player/blob/master/LICENSE)
+
+
+#### 一款垃圾自适应多分屏播放器，支持主流直播、点播。
+> [https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html](https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html)
+
 
 ## Features
 - - [x] 基础多分屏播放，最高5分屏
