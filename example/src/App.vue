@@ -11,7 +11,7 @@
         :isEnableOcr="false"
         :isEnableToolbar="true"
         :width="800"
-        :height="600"
+        :height="450"
     />
   </div>
 </template>
