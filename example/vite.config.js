@@ -3,7 +3,7 @@ import path, {resolve} from 'path'
 import createVuePlugin from '@vitejs/plugin-vue2';
 
 export default defineConfig(config => {
-    let _publicPath = config.mode !== 'production' ? '/' : '/example/dist' // 配置后端服务默认的路径
+    let _publicPath = config.mode !== 'production' ? '/' : '/vue-multi-split-player/example/dist' // 配置后端服务默认的路径
 
     return {
         root: process.cwd(), // 项目根目录
