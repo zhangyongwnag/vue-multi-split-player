@@ -3,8 +3,6 @@ import '@/assets/css/tailwind.css'
 import '@/assets/css/player.css'
 import '@/assets/iconfont/iconfont.css'
 import '@/assets/css/common.css'
-import '@/assets/css/index.css'
-import '@/assets/css/video-js.min.css'
 
 const install = (Vue, options) => {
   if (options) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="container w-[1920px] h-[1080px]">
+  <div class="container w-[1920px] h-[1080px] _flex_center">
     <VueMultiSplitPlayer
         mode="vod"
         :playStreams="playStreams"
@@ -10,6 +10,8 @@
         :isEnableControl="false"
         :isEnableOcr="false"
         :isEnableToolbar="true"
+        :width="800"
+        :height="450"
     />
   </div>
 </template>
@@ -53,7 +55,5 @@ export default {
 <style scoped lang="less">
 .container {
   display: flex;
-  width: 800px;
-  height: 600px;
 }
 </style>

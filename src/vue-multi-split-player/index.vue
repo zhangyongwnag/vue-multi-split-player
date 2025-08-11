@@ -288,7 +288,6 @@ import VodPlayer from './player/vodPlayer';
 import WsPlayer from './player/wsPlayer';
 import WebrtcPlayer from './player/webrtcPlayer';
 import LivePlayer from './player/livePlayer';
-import PubSub from "pubsub-js";
 import useVoiceChannel from "./hook/useVoiceChannel";
 import eventBus from "@/utils/eventBus";
 import useChannelExists from './hook/useChannelExists'
@@ -646,7 +645,7 @@ let _listener_emit = (player) => {
   // 监听播放时间
   player.onPlayTime = time => {
     time ? current.value = time : ''
-    PubSub.publish('currentPlayTime', current.value)
+    // PubSub.publish('currentPlayTime', current.value)
     if (props.mode === 'vod') {
       emits('timeupdate', time)
     }
@@ -654,7 +653,7 @@ let _listener_emit = (player) => {
   // 播放
   player.onPlayState = state => {
     play.value = state
-    PubSub.publish('syncVideo', +play.value)
+    // PubSub.publish('syncVideo', +play.value)
   }
   // 监听播放完成
   player.onPlayFinish = _ => {

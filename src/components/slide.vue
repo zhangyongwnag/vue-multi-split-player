@@ -50,7 +50,6 @@
 
 <script>
 import * as common from '@/utils/common'
-import { Big } from 'big.js'
 
 /**
  * @description 自定义 slide
@@ -105,14 +104,14 @@ export default {
     lineStyle() {
       if (this.distance && this.current && this.duration) {
         return {
-          width: Big(this.current).times(Big(this.distance).div(this.duration).toNumber()).toNumber() + 'px'
+          width: this.current * (this.distance / this.duration) + 'px'
         }
       }
     },
     slideStyle() {
       if (this.distance && this.current && this.duration) {
         return {
-          left: Big(this.current).times(Big(this.distance).div(this.duration).toNumber()).toNumber() + 'px'
+          left: this.current * (this.distance / this.duration) + 'px'
         }
       }
     }
@@ -133,7 +132,8 @@ export default {
         return
       }
       let sliderOffsetLeft = event.target.getBoundingClientRect().left;
-      let newPosition = Big((event.pageX - sliderOffsetLeft)).times(Big(this.duration).div(this.distance).toNumber()).toNumber()
+      let newPosition = (event.pageX - sliderOffsetLeft) * (this.duration / this.distance)
+
       this.updateCurrentTime(newPosition)
 
       // 延迟50毫秒执行，因为上面的updateCurrentTime方法防抖，防抖50毫秒
@@ -181,7 +181,7 @@ export default {
         event.pageX = event.touches[0].pageX;
       }
       let diff = 0
-      diff = Big((event.pageX - this.startX)).times(Big(this.duration).div(this.distance).toNumber()).toNumber()
+      diff = (event.pageX - this.startX) * (this.duration / this.distance)
       let newPosition = this.startPosition + diff
       this.updateCurrentTime(newPosition)
     },
@@ -244,7 +244,7 @@ export default {
       slide.style.transform = `translateX(${offsetX}px)`
       frame.style.transform = `translateX(${offsetX - (180 / 2) + 4}px)`
       // 计算时间
-      let current = Big(offsetX).times(Big(this.duration).div(this.distance).toNumber()).toNumber()
+      let current = offsetX * (this.duration / this.distance)
       this.$set(this.thumbnail, 'time', current.toFixed(0))
       if (this.mark.length) {
         // 获取当前观看的知识点
@@ -287,7 +287,7 @@ export default {
     // 获取知识点的位置信息
     getNotePosition(time) {
       if (this.distance && this.duration) {
-        return Big(time).times(Big(this.distance).div(this.duration).toNumber()).toNumber()
+        return time * (this.distance / this.duration)
       }
     },
     /**

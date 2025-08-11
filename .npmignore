@@ -8,3 +8,6 @@ coverage/
 Thumbs.db
 .gitignore
 package-lock.json
+
+src/assets/
+src/index.ts

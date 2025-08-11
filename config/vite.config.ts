@@ -39,7 +39,7 @@ export default defineConfig(config => {
             assetsDir: 'assets',
             brotliSize: false,
             assetsInlineLimit: 0, // 不内联静态资源
-            sourcemap: false,
+            sourcemap: true,
             copyPublicDir: false, // 不复制public目录
             reportCompressedSize: false,
             lib: {
@@ -47,16 +47,20 @@ export default defineConfig(config => {
                 name: 'vue-multi-split-player', // 库名称
                 // formats: ['es', 'umd', 'cjs', 'amd', 'system'], // 输出格式
                 formats: ['es', 'umd'], // 输出格式
-                fileName: (format) => `vue-multi-split-player.${format}.js`, // 输出文件名
+                fileName: (format) => {
+                    // 为所有格式添加.min后缀
+                    return `vue-multi-split-player.${format}.js`;
+                } // 输出文件名
             },
             rollupOptions: {
                 // 确保外部化处理那些你不想打包进库的依赖
-                external: ['vue', 'element-ui'],
+                external: ['vue', 'element-ui', 'pubsub-js'],
                 output: {
                     // 在UMD模式下为这些外部依赖提供全局变量
                     globals: {
                         vue: 'Vue',
                         'element-ui': 'ElementUI',
+                        'pubsub-js': 'PubSub'
                     }
                 }
             },
