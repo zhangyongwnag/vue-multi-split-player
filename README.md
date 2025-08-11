@@ -163,4 +163,4 @@ let playStreams = reactive({
 
 ## License
 
-MIT © [yw.z]
+MIT © 2025 yw.z
