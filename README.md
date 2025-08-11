@@ -44,7 +44,7 @@ npm install vue-multi-split-player --save
 // main.js
 import Vue from 'vue';
 import * as VueMultiSplitPlayer from "vue-multi-split-player";
-import 'vue-multi-split-player/style'; // Import styles
+import 'vue-multi-split-player/dist/style.css'; // Import styles
 
 Vue.use(VueMultiSplitPlayer);
 ```
@@ -54,7 +54,7 @@ Vue.use(VueMultiSplitPlayer);
 ```javascript
 // In your component
 import { VueMultiSplitPlayer } from 'vue-multi-split-player';
-import 'vue-multi-split-player/style'; // Import styles
+import 'vue-multi-split-player/dist/style.css'; // Import styles
 
 // for vue2.6-
 export default {
