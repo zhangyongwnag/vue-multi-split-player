@@ -45,7 +45,7 @@
              id="player_item_5"></div>
       </div>
       <!--加载图-->
-      <div v-if="!is_init" class="loading _flex_center">
+      <div v-if="!is_init" class="player_loading _flex_center">
         <img src="@/assets/img/shineon-load.gif" alt="">
       </div>
     </div>
@@ -1224,13 +1224,14 @@ defineExpose({
   background-color: #000;
   position: relative;
   overflow: hidden;
+  --player-common-color: rgba(0,159,233,1);
 
   .player_wrap {
     width: 100%;
     height: auto;
     //aspect-ratio: 16/9;
 
-    .loading {
+    .player_loading {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -1489,7 +1490,7 @@ defineExpose({
   }
 
   .active {
-    background-color: var(--common-color);
+    background-color: var(--player-common-color);
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.4);
 
     span {
