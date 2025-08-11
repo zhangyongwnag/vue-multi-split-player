@@ -1,13 +1,21 @@
 .idea/
 node_modules/
 build/
-coverage/
+config/
+example/
+test/
+public/
 *.log
 .env
+index.html
 .DS_Store
-Thumbs.db
 .gitignore
 package-lock.json
+postcss.config.js
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
 
 src/assets/
-src/index.ts
+
+dist/*.map
