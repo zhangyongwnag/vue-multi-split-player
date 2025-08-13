@@ -10,8 +10,6 @@
         :isEnableControl="false"
         :isEnableOcr="true"
         :isEnableToolbar="true"
-        :width="800"
-        :height="450"
         :isEnableWaterMarker="true"
         :waterMarkerContent="waterMarkerContent"
     >
