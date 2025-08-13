@@ -342,7 +342,7 @@ export default {
     top: 50%;
     width: 0;
     height: 4.5px;
-    background-color: #3a7afe;
+    background-color: var(--common-color, #3a7afe);
     transform: translateY(-50%);
     border-radius: 3px 0 0 3px;
     z-index: 2;
@@ -392,7 +392,7 @@ export default {
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background-color: #3a7afe;
+      background-color: var(--common-color, #3a7afe);
       opacity: 1;
       transition: all 0.3s;
       transform: translate(-50%, -50%);
@@ -511,7 +511,7 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: indianred;
-      box-shadow: 0 0 3px 0 indianred;
+      box-shadow: 0 0 3px 1px #fff;
       cursor: inherit;
       border-radius: inherit;
     }

@@ -11,6 +11,7 @@ export default defineConfig(config => {
         resolve: {
             // 项目别名
             alias: {
+                'vue': 'vue/dist/vue.esm.js', // 采用编译时处理Vue库
                 '@': path.resolve(__dirname, '../src')
             },
             extensions: ['.js', '.ts', '.vue', '.tsx', '.json', '.less'], // 引入对应的文件时可以忽略其后缀

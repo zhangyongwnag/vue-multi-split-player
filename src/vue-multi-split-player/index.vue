@@ -278,7 +278,7 @@
 </template>
 
 <script setup>
-import {ref, reactive, watch, computed, nextTick, onMounted, onBeforeUnmount, getCurrentInstance} from 'vue';
+import {ref, reactive, watch, computed, nextTick, onMounted, onBeforeUnmount, getCurrentInstance, inject} from 'vue';
 import Slide from '@/components/slide.vue';
 import * as common from '@/utils/common';
 import FullScreen from '@/components/fullscreen.vue';
@@ -299,6 +299,8 @@ import AudioResource from '@/assets/audio/voice.m4a'
 // 修复后的代码
 // const instance = getCurrentInstance()
 // const _t = instance ? instance.proxy : null
+
+let PubSub = inject('pubsub', undefined)
 
 let { isExists } = useChannelExists()
 
@@ -657,7 +659,7 @@ let _listener_emit = (player) => {
   // 监听播放时间
   player.onPlayTime = time => {
     time ? current.value = time : ''
-    // PubSub.publish('currentPlayTime', current.value)
+    PubSub && (PubSub.publish('currentPlayTime', current.value))
     if (props.mode === 'vod') {
       emits('timeupdate', time)
     }
@@ -665,11 +667,12 @@ let _listener_emit = (player) => {
   // 播放
   player.onPlayState = state => {
     play.value = state
-    // PubSub.publish('syncVideo', +play.value)
+    PubSub && (PubSub.publish('syncVideo', +play.value))
   }
   // 监听播放完成
   player.onPlayFinish = _ => {
     // 播放完毕
+
     play.value = false;
     // 如果开启循环播放
     if (loop.value) {
@@ -866,7 +869,7 @@ let _handleRequestFullscreen = () => {
   }, 40)
 }
 
-// 切换预览的通道
+// 改变选择的通道
 let _handleChangeChoiceChannel = value => {
   channel_list.value.has(value) ? channel_list.value.delete(value) : channel_list.value.add(value)
   channel_list.value = new Set(channel_list.value)
@@ -1235,7 +1238,6 @@ defineExpose({
   background-color: #000;
   position: relative;
   overflow: hidden;
-  --player-common-color: rgba(0,159,233,1);
 
   .player_wrap {
     width: 100%;
@@ -1501,7 +1503,7 @@ defineExpose({
   }
 
   .active {
-    background-color: var(--player-common-color);
+    background-color: var(--common-color, #3a7afe);
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.4);
 
     span {
