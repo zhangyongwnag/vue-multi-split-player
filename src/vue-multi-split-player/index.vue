@@ -270,6 +270,8 @@
     <!--    :curPlayTime="current * 1000"-->
     <!--    @cancel="cancelOcrModel"/>-->
 
+    <slot name="ocr" :show_ocr="show_ocr" :mode="mode" :fullscreen="fullscreen_status" :origin="ocr_origin" :curPlayTime="current" :cancel="cancelOcrModel"></slot>
+
     <!--弹幕-->
     <!--<danmuku :mode="mode" :isEnableDanmu="isEnableDanmu"/>-->
   </div>
@@ -295,8 +297,8 @@ import usePlayerEmit from './hook/usePlayerEmit'
 import AudioResource from '@/assets/audio/voice.m4a'
 
 // 修复后的代码
-const instance = getCurrentInstance()
-const _t = instance ? instance.proxy : null
+// const instance = getCurrentInstance()
+// const _t = instance ? instance.proxy : null
 
 let { isExists } = useChannelExists()
 
@@ -368,13 +370,23 @@ const props = defineProps({
   isEnableWaterMarker: {
     type: Boolean,
     default: false
+  },
+  // 水印内容，开始水印时生效
+  waterMarkerContent: {
+    type: String,
+    default: ''
+  },
+  // 声音通道配置
+  voiceConfig: {
+    type: Array,
+    default: () => []
   }
 })
 
 // 定义 emits
 const emits = defineEmits(['ready', 'timeupdate', 'startControl', 'stopControl', 'updateChannel'])
 
-let {voiceChannel} = useVoiceChannel(props.classroomType)
+let {voiceChannel} = useVoiceChannel(props.classroomType, props.voiceConfig)
 
 let is_loading = ref(true); // 是否准备中
 let is_init = ref(false);// 是否初始化完成
@@ -799,7 +811,7 @@ let _handleWaterMarker = _ => {
     // 生成水印ID
     waterMarkerId.value = `player_wrap_${new Date().getTime()}`
     // 水印ID，这里要唯一，可能一个页面俩个播放器，所以这里要判断处理
-    waterMarker.value = new WaterMarker(waterMarkerId.value)
+    waterMarker.value = new WaterMarker({ id: waterMarkerId.value, content: props.waterMarkerContent })
   }
 }
 
@@ -1002,7 +1014,7 @@ let _handleCancelAllMaximization = value => {
 let _handleChangeScreeningToMovie = () => {
   isMovieMode.value = !isMovieMode.value
   if (isMovieMode.value) {
-    // 抽取PGM通道
+    // 抽取PGM通
     let channel = isExists(resource_list.value, 'PGM')
     channel_list.value = new Set([channel.id])
   } else {
@@ -1136,11 +1148,10 @@ let _listener_fullscreen_status = () => {
     props.mode === 'vod' && slide.value._getDistance()
     // 重新生成水印
     if (waterMarkerId.value) {
+      // 销毁水印
       waterMarker.value.destroy()
-      // 生成水印ID
-      waterMarkerId.value = `player_wrap_${new Date().getTime()}`
-      // 水印ID，这里要唯一，可能一个页面俩个播放器，所以这里要判断处理
-      waterMarker.value = new WaterMarker(waterMarkerId.value)
+      // 重新生成水印
+      _handleWaterMarker()
     }
   }, 200)
 }
@@ -1519,7 +1530,7 @@ defineExpose({
 
 
 .voice_list {
-  width: 120px;
+  min-width: 120px;
   .item {
     img {
       position: absolute;
@@ -1536,7 +1547,7 @@ defineExpose({
 .ocr_list,
 .channel_list,
 .mode_list {
-  width: 120px;
+  min-width: 120px;
   .item {
     i {
       position: absolute;

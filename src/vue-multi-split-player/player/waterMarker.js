@@ -2,8 +2,9 @@ import {debounce} from "@/utils/common";
 import { Notification } from "element-ui";
 
 export default class WaterMarker {
-  constructor(playId) {
-    this.playId = playId; // 播放id
+  constructor(options) {
+    this.playId = options.id; // 播放id
+    this.content = (options.content || 'vue-multi-split-player').toString(); // 水印内容
     this.timer = null
     this.waterMarkerDom = null
     this.observer_c = null // 监听水印，防篡改
@@ -14,7 +15,7 @@ export default class WaterMarker {
   async create() {
     this.getElement() ? this.getElement().remove() : ''
     await this.wait(500 + Math.random() * 200)
-    let content = `<span style="font-size: 16px">${'游客'}</span> <br> 版权归我他妈所有`
+    let content = this.content
     let wrap = document.getElementById(this.playId)
     if (!wrap) {
       return

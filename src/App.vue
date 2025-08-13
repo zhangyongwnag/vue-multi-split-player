@@ -1,5 +1,5 @@
 <template>
-  <div class="container w-[1920px] h-[1080px] _flex_center">
+  <div class="container w-[100vw] h-[100vh] _flex_center">
     <VueMultiSplitPlayer
         mode="vod"
         :playStreams="playStreams"
@@ -8,19 +8,24 @@
         :autoplay="true"
         :isEnableDanmu="false"
         :isEnableControl="false"
-        :isEnableOcr="false"
+        :isEnableOcr="true"
         :isEnableToolbar="true"
         :width="800"
         :height="450"
-    />
+        :isEnableWaterMarker="true"
+        :waterMarkerContent="waterMarkerContent"
+    >
+    </VueMultiSplitPlayer>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data() {
     return {
+      waterMarkerContent: `<span style="font-size: 16px">提示信息</span> <br> 版权归vue-multi-split-player所有`,
       playStreams: {
         '高清': {
           source: [
@@ -49,6 +54,8 @@ export default {
       },
     }
   },
+  components: {
+  }
 }
 </script>
 

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import "@/assets/css/tailwind.css"
-import * as VueMultiSplitPlayer from "./vue-multi-split-player/index"
 import { Slider, Tooltip, Popover, Button } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css"
+
+import * as VueMultiSplitPlayer from './vue-multi-split-player/index'
 
 Vue.use(VueMultiSplitPlayer)
 Vue.use(Slider)

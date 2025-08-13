@@ -5,7 +5,7 @@ export default function useVoiceChannel(classroomType, voiceConfig) {
   let type = classroomType
   type ??= ''
   let voiceChannel = ref(new Set([]))
-  if (type !== '') {
+  if (type !== '' && voiceConfig.length) {
     let _v = String(voiceConfig.find(item => item.id === type)?.value)
 
     if (_v) {

@@ -13,7 +13,6 @@
 #### 一款垃圾自适应多分屏播放器，支持主流直播、点播。
 > [https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html](https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html)
 
-
 ## Features
 - - [x] 基础多分屏播放，最高5分屏
 - - [x] 支持直播websocket、webrtc、m3u8、flv，点播m3u8、mp4
@@ -133,6 +132,7 @@ let playStreams = reactive({
 | isEnableOcr | Boolean | false | 是否启用OCR |
 | isEnableToolbar | Boolean | true | 是否启用底部菜单栏 |
 | isEnableWaterMarker | Boolean | false | 是否启用水印 |
+| waterMarkerContent | String | 'vue-multi-split-player' | 水印内容 |
 
 ## Methods
 
@@ -157,9 +157,36 @@ let playStreams = reactive({
 
 - `ready`: 播放器准备就绪
 - `timeupdate`: 当前播放时间更新
-- `startControl`: 开始远程控制
-- `stopControl`: 停止远程控制
-- `updateChannel`: 通道更新
+- `startControl`: mode为websocket时开始控制
+- `stopControl`: mode为websocket时停止控制
+- `updateChannel`: 通道数量更新
+
+## Slot
+- -[x] ocr： 自定义ocr作用域插槽，用于自定义ocr识别逻辑
+  - **参数**: `data` - 包含ocr识别结果的对象
+  - **示例**:
+    ```vue
+    <template>
+      <VueMultiSplitPlayer>
+        <template #ocr="data">
+          <div>
+            <p>OCR识别数据: {{ data }}</p>
+          </div>
+        </template>
+      </VueMultiSplitPlayer>
+    </template>
+    ```
+- -[ ] 弹幕： 自定义弹幕作用域插槽，用于自定义弹幕逻辑
+  - **参数**: `data` - 包含弹幕数据的对象
+  - **示例**:
+    ```vue
+    <template>
+      <VueMultiSplitPlayer>
+        <template #danmu="data">
+        </template>
+      </VueMultiSplitPlayer>
+    </template>
+    ```
 
 ## License
 
