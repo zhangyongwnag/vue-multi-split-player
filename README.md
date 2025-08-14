@@ -1,14 +1,13 @@
 # vue-multi-split-player
 
 [![npm version](https://img.shields.io/npm/v/vue-multi-split-player.svg)](https://www.npmjs.com/package/vue-multi-split-player)
+![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/vue-multi-split-player?style=flat)
 [![vue version](https://img.shields.io/badge/vue-2.7.16-green.svg)](https://vuejs.org/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/zhangyongwnag/vue-multi-split-player)
 ![npm download](https://img.shields.io/npm/dm/vue-multi-split-player)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/zhangyongwnag/vue-multi-split-player)
+![GitHub License](https://img.shields.io/github/license/zhangyongwnag/vue-multi-split-player)
 
-[![NPM](https://nodei.co/npm/vue-multi-split-player.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-multi-split-player/)
-[![NPM](https://nodei.co/npm-dl/vue-multi-split-player.png?months=100&height=10)](https://nodei.co/npm/vue-multi-split-player/)
-
+[![NPM](https://nodei.co/npm/vue-multi-split-player.svg?data=d,s&color=blue)](https://nodei.co/npm/vue-multi-split-player/)
 
 #### 一款垃圾自适应多分屏播放器，支持主流直播、点播。
 > [https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html](https://zhangyongwnag.github.io/vue-multi-split-player/example/dist/index.html)
@@ -79,7 +78,7 @@ export default {
       :noteList="[]"
       :muted="false"
       :autoplay="true"
-      :classroomType="" 
+      classroomType="" 
       :isEnableDanmu="false"
       :isEnableControl="false"
       :isEnableOcr="false"
