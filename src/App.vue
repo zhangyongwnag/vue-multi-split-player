@@ -16,7 +16,6 @@
     </VueMultiSplitPlayer>
   </div>
 </template>
-
 <script>
 
 export default {
@@ -28,7 +27,7 @@ export default {
         '高清': {
           source: [
             {
-              url: 'http://vjs.zencdn.net/v/oceans.mp4',
+              url: 'http://10.0.129.5:81/live/76b1727c_4dfc_4695_ab7a_aa7f1812e7ca.m3u8',
               name: '海洋',
               id: 1
             },

@@ -549,6 +549,7 @@ let initializePlayer = async (item) => {
   }
   // 注册播放事件
   if (props.autoplay || isDisabledAutoplay.value) {
+
     await _register_emits('play')
   } else {
     await _register_emits('pause')
@@ -957,6 +958,7 @@ let _updateVideoStyle = player => {
     if (props.mode === 'live') {
       player.player.children_[0].id = `video_${player.id}`
       player.player.children_[0].classList = ['video__']
+      player.player.children_[0].muted = false
     } else if (props.mode === 'vod') {
       player.player.id = `video_${player.id}`
       player.player.classList = ['video__']

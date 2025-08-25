@@ -1640,7 +1640,7 @@ const ti = "data:audio/mp4;base64,AAAAGGZ0eXBNNEEgAAACAGlzb21pc28yAAAACGZyZWUAAC
     }, re = (r) => {
       if (r.player)
         try {
-          t.mode === "live" ? (r.player.children_[0].id = `video_${r.id}`, r.player.children_[0].classList = ["video__"]) : t.mode === "vod" ? (r.player.id = `video_${r.id}`, r.player.classList = ["video__"]) : t.mode === "websocket" ? (r.player.player.id = `video_${r.id}`, r.player.player.classList = ["video__"]) : t.mode;
+          t.mode === "live" ? (r.player.children_[0].id = `video_${r.id}`, r.player.children_[0].classList = ["video__"], r.player.children_[0].muted = !1) : t.mode === "vod" ? (r.player.id = `video_${r.id}`, r.player.classList = ["video__"]) : t.mode === "websocket" ? (r.player.player.id = `video_${r.id}`, r.player.player.classList = ["video__"]) : t.mode;
         } catch (A) {
         }
     }, He = (r) => {
@@ -1784,7 +1784,7 @@ var ni = function() {
   li,
   !1,
   null,
-  "72938460"
+  "2770f398"
 );
 const Ai = ri.exports, gi = (a, e) => {
   a.component("VueMultiSplitPlayer", Ai);
