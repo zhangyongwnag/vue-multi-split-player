@@ -73,6 +73,8 @@ export default class livePlayer {
       el.appendChild(video)
       this.player = videojs(video, {
           liveui: true,
+          poster: poster,
+        playsinline: false,
           autoplay: isChrome() ? 'muted' : true,
           controls: false,
           volume: 0,

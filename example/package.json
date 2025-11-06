@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "element-ui": "^2.11.0",
+    "vite": "^5.4.11",
     "vue": "^2.7.16",
-    "vue-multi-split-player": "^1.0.0-alpha.3"
+    "vue-multi-split-player": "^1.0.0-alpha.4"
   }
 }

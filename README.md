@@ -159,6 +159,7 @@ let playStreams = reactive({
 - `startControl`: mode为websocket时开始控制
 - `stopControl`: mode为websocket时停止控制
 - `updateChannel`: 通道数量更新
+- `finished`: 播放完毕
 
 ## Slot
 - -[x] ocr： 自定义ocr作用域插槽，用于自定义ocr识别逻辑

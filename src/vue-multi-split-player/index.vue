@@ -386,7 +386,7 @@ const props = defineProps({
 })
 
 // 定义 emits
-const emits = defineEmits(['ready', 'timeupdate', 'startControl', 'stopControl', 'updateChannel'])
+const emits = defineEmits(['ready', 'timeupdate', 'startControl', 'stopControl', 'updateChannel', 'finished'])
 
 let {voiceChannel} = useVoiceChannel(props.classroomType, props.voiceConfig)
 
@@ -673,8 +673,9 @@ let _listener_emit = (player) => {
   // 监听播放完成
   player.onPlayFinish = _ => {
     // 播放完毕
-
     play.value = false;
+    // 触发播放完毕emit
+    emits('finished')
     // 如果开启循环播放
     if (loop.value) {
       _register_emits('replay');

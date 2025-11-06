@@ -33,6 +33,24 @@ export default defineConfig(config => {
                 config: path.resolve(__dirname, '../tailwind.config.js') // Tailwind CSS 配置文件路径
             }),
         ],
+        server: {
+            host: '0.0.0.0', // 服务器主机名，如果允许外部访问，可设置为 "0.0.0.0"
+            port: 3006, // 服务器端口号：默认3000，如果被占用，自动切换
+            open: false, // 是否自动打开浏览器
+            strictPort: false, // 设为 true 时若端口已被占用则会直接退出，而不是尝试下一个可用端口
+            force: true, //是否强制依赖预构建
+            proxy: {}, // 代理
+            hmr: {
+                protocol: 'ws',
+                host: 'localhost',
+                port: 3005,
+                timeout: 0,
+                clientPort: 3005,
+                overlay: false
+            },
+            // 添加Node.js参数
+            // nodeArgs: ['--max-old-space-size=256']
+        },
         build: {
             target: 'es2015',
             emptyOutDir: true,
@@ -53,6 +71,7 @@ export default defineConfig(config => {
                     return `vue-multi-split-player.${format}.js`;
                 } // 输出文件名
             },
+
             rollupOptions: {
                 // 确保外部化处理那些你不想打包进库的依赖
                 external: ['vue', 'element-ui', 'pubsub-js'],
@@ -66,6 +85,13 @@ export default defineConfig(config => {
                 }
             },
             minify: 'esbuild'
+        },
+        lintOnSave: 'warning', // 设置是否在开发环境下每次保存代码时都启用 eslint验证
+        clearScreen: true, // 清除控制台信息
+        appType: 'spa', // 项目类型 spa mpa
+        // vite 4.0
+        optimizeDeps: {
+            force: false // 强制依赖预构建
         }
     }
 })

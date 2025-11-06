@@ -1,16 +1,14 @@
 <template>
   <div class="slide"
        id="videoPlayer"
-       @mousedown.prevent="handleClick($event)"
-       @touchstart.prevent="handleClick($event)"
+       @pointerdown.prevent="handleClick($event)"
        @mouseenter="handleMouseEnter"
-       @mousemove="onDraggingThumbnail"
+       @pointermove="onDraggingThumbnail"
        @mouseleave="handleMouseLeave">
     <div
         class="custom_cursor"
         id="box"
-        @mousedown="onButtonDown"
-        @touchstart="onButtonDown"
+        @pointerdown="onButtonDown"
         :style="slideStyle"
         tabindex="0"
       ></div>
@@ -137,9 +135,9 @@ export default {
       this.updateCurrentTime(newPosition)
 
       // 延迟50毫秒执行，因为上面的updateCurrentTime方法防抖，防抖50毫秒
-      // setTimeout(_ => {
-      //   this.onButtonDown(event)
-      // }, 50)
+      setTimeout(_ => {
+        this.onButtonDown(event)
+      }, 50)
     },
     /**
      * @description 鼠标/触摸板开始
@@ -151,10 +149,8 @@ export default {
       event.preventDefault()
       // 拖拽开始
       this.onDragStart(event)
-      window.addEventListener('mousemove', this.onDragging)
-      window.addEventListener('touchmove', this.onDragging)
-      window.addEventListener('mouseup', this.onDragEnd)
-      window.addEventListener('touchend', this.onDragEnd)
+      window.addEventListener('pointermove', this.onDragging)
+      window.addEventListener('pointerup', this.onDragEnd)
       window.addEventListener('contextmenu', this.onDragEnd)
     },
     /**
@@ -192,10 +188,8 @@ export default {
       if (!this.is_draging) {
         return
       }
-      window.removeEventListener('mousemove', this.onDragging)
-      window.removeEventListener('touchmove', this.onDragging)
-      window.removeEventListener('mouseup', this.onDragEnd)
-      window.removeEventListener('touchend', this.onDragEnd)
+      window.removeEventListener('pointermove', this.onDragging)
+      window.removeEventListener('pointerup', this.onDragEnd)
       window.removeEventListener('contextmenu', this.onDragEnd)
       setTimeout(_ => {
         this.is_draging = false
@@ -209,11 +203,12 @@ export default {
         value = this.duration
       }
       // 在浏览器空闲时，进行更新
-      if (window.requestIdleCallback) {
-        window.requestIdleCallback(_ => this.$emit('update', value))
-      } else {
-        common.debounce(_ => this.$emit('update', value), 100)
-      }
+      // if (window.requestIdleCallback) {
+      //   window.requestIdleCallback(_ => this.$emit('update', value))
+      // } else {
+      //   common.debounce(_ => this.$emit('update', value), 0)
+      // }
+      this.$emit('update', value)
     },
     /**
      * @description 鼠标移入，显示移动块
@@ -325,6 +320,7 @@ export default {
   z-index: 6;
   cursor: pointer;
   margin-bottom: 6px;
+  touch-action: none;
   #track {
     position: absolute;
     left: 0;
@@ -361,6 +357,7 @@ export default {
     z-index: 3;
     filter: brightness(1.05);
     will-change: left;
+    touch-action: none;
 
     &:hover {
       cursor: grab;
